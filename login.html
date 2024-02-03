@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background-color: rgb(145, 198, 226);
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid wheat;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    top: 50px;
+}
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid blue;
+}
+
+.toggle-btn {
+    padding: 10px 23px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #1d6188;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    padding: 1.rem;
+    border-radius: .5rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin:10px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.input-field::placeholder {
+    color: #fff;
+}
+
+.submit-btn {
+    width: 58%;
+    padding: 10px 30px;
+    display: block;
+    margin: auto;
+    background: #1d6188;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    position: relative;
+}
+
+.chech-box {
+    margin: 30px 10px 30px 0;
+}
+
+.chech-box+span {
+    color: #fff;
+    font-size: 15px;
+}
+
+#login {
+    top: 15vh;
+    left: 50px;
+    padding-right: 25px;
+}
+
+#register {
+    top: 15vh;
+    left: 450vh;
+}
+
+.fm {
+    margin: 25px;
+}</style>
+    
+</head>
+<body>
+<div id="login-form-container">
+    <div id="login1">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">log in</button>
+                <button type="button" class="toggle-btn" onclick="register()">register</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field box" placeholder="username">
+                <input type="password" class="input-field box" placeholder="enter password">
+                <input type="checkbox" class="chech-box"><span>forgot your password?</span>
+                <input type="button" value="login" class="submit-btn">
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="enter your username" required><br>
+                <input type="email" class="input-field" placeholder="enter your email" required><br>
+                <input type="password" class="input-field" placeholder="enter your password" required><br>
+                <input type="password" class="input-field" placeholder="comfirm your password" required><br>
+                male<input type="checkbox" class="fm">
+                female<input type="checkbox" class="fm"><br>
+                <button type="submit" class="submit-btn">register</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
